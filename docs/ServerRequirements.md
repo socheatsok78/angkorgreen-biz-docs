@@ -13,12 +13,25 @@ Web-service requirements:
 Packages required:
 ```sh
 $ sudo apt-get install -y \
-    libxrender1 \
-    libfontconfig1 \
-    libx11-dev \
-    libjpeg62 \
-    libxtst6 \
-    libssl1.0-dev
+    apt-transport-https \
+    ca-certificates \
+    software-properties-common \
+    locales \
+    nano \
+    unzip \
+    git \
+    curl \
+    build-essential \
+    libpng-dev \
+    libsodium-dev \
+    libjpeg62-turbo-dev \
+    libfreetype6-dev \
+    zip \
+    libzip-dev \
+    jpegoptim \
+    optipng \
+    pngquant \
+    gifsicle
 ```
 
 If you are running a headless server such as `ubuntu-server` you might need to install `Virtual Framebuffer`:`xvfb`:
@@ -28,8 +41,26 @@ If you are running a headless server such as `ubuntu-server` you might need to i
 $ sudo apt-get install -y xvfb
 ```
 
+Other packages required by `xvfb`
+```sh
+$ sudo apt-get install -y \
+    libxrender1 \
+    libfontconfig1 \
+    libx11-dev \
+    libjpeg62 \
+    libxtst6 \
+    libssl1.0-dev
+```
+
 > see https://launchpad.net/ubuntu/bionic/+package/xvfb
 
+If you are wish to run `laravel/horizon` you might need to install `supervisor` as well, simply run:
+
+```sh
+$ sudo apt-get install supervisor
+```
+
+The following `laravel/horizon` supervisor to configure your server, https://laravel.com/docs/7.x/horizon#deploying-horizon
 
 ### Getting project source code
 After you have installed all the required dependencies, now it time to clone the project source code onto your server.
