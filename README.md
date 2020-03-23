@@ -11,6 +11,7 @@ This is a getting started guide for `angkorgreen.biz` setup and usage.
 
 1. [Server Requirements](docs/ServerRequirements.md)
 2. [Development Environment](docs/DevelopmentEnvironment.md)
+3. [Deployment](docs/Deployment.md)
 
 ### License
 [![BSD 3-Clause License](https://img.shields.io/github/license/socheatsok78/angkorgreen-biz-docs)](LICENSE)
